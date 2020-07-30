@@ -1,3 +1,5 @@
+from typing import Any
+
 from clikit.api.command import Command
 from clikit.args import StringArgs
 from clikit.formatter import AnsiFormatter
@@ -33,7 +35,7 @@ class CommandTester(object):
     def status_code(self):  # type: () -> int
         return self._status_code
 
-    def execute(self, args="", **options):  # type: (str, ...) -> int
+    def execute(self, args="", **options):  # type: (str, Any) -> int
         """
         Executes the command
 

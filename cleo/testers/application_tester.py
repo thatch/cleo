@@ -1,3 +1,5 @@
+from typing import Any
+
 from clikit.args import StringArgs
 
 from cleo import Application
@@ -23,7 +25,7 @@ class ApplicationTester(object):
     def status_code(self):  # type: () -> int
         return self._status_code
 
-    def execute(self, args, **options):  # type: (str, ...) -> int
+    def execute(self, args, **options):  # type: (str, Any) -> int
         """
         Executes the command
 
